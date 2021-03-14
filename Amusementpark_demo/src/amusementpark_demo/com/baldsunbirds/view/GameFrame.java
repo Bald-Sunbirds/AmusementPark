@@ -1,8 +1,8 @@
-package com.baldsunbirds.view;
+package amusementpark_demo.com.baldsunbirds.view;
 
-import com.baldsunbirds.controller.GamePanel;
-import com.baldsunbirds.controller.MenuPanel;
-import com.baldsunbirds.controller.NaviPanel;
+import amusementpark_demo.com.baldsunbirds.controller.GamePanel;
+import amusementpark_demo.com.baldsunbirds.controller.MenuPanel;
+import amusementpark_demo.com.baldsunbirds.controller.NaviPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,24 +10,40 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class GameFrame extends BaseFrame implements MouseListener {
-
+    
+    private NaviPanel naviBar;
+    private MenuPanel menuBar;
+    private GamePanel gameArea;
+    private Float currFund = 750f;
+    
     public GameFrame() {
         super();
         System.out.println("Game starts");
 
-
-        NaviPanel naviBar = new NaviPanel();
+        // the info box
+        naviBar = new NaviPanel(this);
         naviBar.setPreferredSize(new Dimension(800, 100));
+        naviBar.setLayout(null);
+        naviBar.init();
+        naviBar.updateFundTxt(currFund); // test
         frame.add(naviBar, BorderLayout.NORTH);
-        naviBar.setBackground(Color.BLUE);
-
-        JPanel menuBar = new MenuPanel();
-        menuBar.setPreferredSize(new Dimension(150, 450));
+        naviBar.setBackground(Color.gray);
+        
+        
+        // for the build(pop up window)
+        menuBar = new MenuPanel(this);
+        menuBar.setPreferredSize(new Dimension(200, 450));
+        menuBar.setLayout(null);
+        menuBar.init();
+        
         frame.add(menuBar, BorderLayout.EAST);
         menuBar.setBackground(Color.ORANGE);
-
-        JPanel gameArea = new GamePanel();
+        
+        
+        // game engine
+        gameArea = new GamePanel();
         gameArea.setPreferredSize(new Dimension(650, 450));
+        gameArea.addMouseListener(this);
         frame.add(gameArea, BorderLayout.CENTER);
         gameArea.setBackground(Color.GREEN);
     }

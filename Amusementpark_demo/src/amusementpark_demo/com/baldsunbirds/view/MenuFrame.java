@@ -1,6 +1,6 @@
-package com.baldsunbirds.view;
+package amusementpark_demo.com.baldsunbirds.view;
 
-import com.baldsunbirds.utils.Constants;
+import amusementpark_demo.com.baldsunbirds.utils.Constants;
 
 import javax.swing.*;
 import java.awt.*;

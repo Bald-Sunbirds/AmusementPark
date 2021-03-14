@@ -1,4 +1,4 @@
-package com.baldsunbirds.utils;
+package amusementpark_demo.com.baldsunbirds.utils;
 
 public class Time {
 

@@ -1,4 +1,4 @@
-package com.baldsunbirds.entity;
+package amusementpark_demo.com.baldsunbirds.entity;
 
 public class Building {
     private Integer Health;

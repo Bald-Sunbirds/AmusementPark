@@ -1,4 +1,4 @@
-package com.baldsunbirds.controller;
+package amusementpark_demo.com.baldsunbirds.controller;
 
 import javax.swing.*;
 
