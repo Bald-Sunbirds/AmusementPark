@@ -15,7 +15,7 @@ public class BaseFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-
+        frame.validate();
         frame.setVisible(true);
     }
 

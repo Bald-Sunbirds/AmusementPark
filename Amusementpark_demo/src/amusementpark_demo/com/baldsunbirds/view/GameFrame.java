@@ -25,7 +25,7 @@ public class GameFrame extends BaseFrame implements MouseListener {
         naviBar.setPreferredSize(new Dimension(800, 100));
         naviBar.setLayout(null);
         naviBar.init();
-        naviBar.updateFundTxt(currFund); // test
+        
         frame.add(naviBar, BorderLayout.NORTH);
         naviBar.setBackground(Color.gray);
         
@@ -35,7 +35,6 @@ public class GameFrame extends BaseFrame implements MouseListener {
         menuBar.setPreferredSize(new Dimension(200, 450));
         menuBar.setLayout(null);
         menuBar.init();
-        
         frame.add(menuBar, BorderLayout.EAST);
         menuBar.setBackground(Color.ORANGE);
         
@@ -46,6 +45,8 @@ public class GameFrame extends BaseFrame implements MouseListener {
         gameArea.addMouseListener(this);
         frame.add(gameArea, BorderLayout.CENTER);
         gameArea.setBackground(Color.GREEN);
+        
+        naviBar.updateFundTxt(currFund); // test
     }
 
 
