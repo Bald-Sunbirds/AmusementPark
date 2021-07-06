@@ -17,6 +17,7 @@ public class BaseFrame {
 
         frame.validate();
         frame.setVisible(true);
+       
     }
 
     public ActionListener getActionListener(int op) {

@@ -1,0 +1,6 @@
+/Amusementpark_demo/dist/
+/dist/
+Amusementpark_demo/build/
+*.class
+Amusementpark_demo/nbproject/
+

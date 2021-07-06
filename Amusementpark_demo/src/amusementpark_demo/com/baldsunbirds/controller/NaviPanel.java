@@ -1,8 +1,13 @@
 package amusementpark_demo.com.baldsunbirds.controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
 import javax.swing.*;
 import amusementpark_demo.com.baldsunbirds.view.GameFrame;
 import java.text.NumberFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class NaviPanel extends JPanel {
 
@@ -28,8 +33,10 @@ public class NaviPanel extends JPanel {
         this.add(fundSt);
         
         JButton startBtn = new JButton("Start");
-        startBtn.setBounds(630, 25, 100, 40);
-        startBtn.addActionListener(gf.getActionListener(666));
+        startBtn.setBounds(630, 15, 100, 60);
+        startBtn.addActionListener((ActionEvent e) -> {
+            gf.start();
+        });
         this.add(startBtn);
     }
     
